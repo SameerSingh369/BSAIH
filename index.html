@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="web3.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: midnightblue;
+            padding: 10px 20px;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .navbar-name {
+            color: white;
+            font-size: 1.8em;
+            font-weight: 600;
+            font-family: 'Verdana', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+            .navbar .logo-name {
+                font-size: 20px;
+            }
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: midnightblue;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .button1 {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            color: white;
+            background-color: midnightblue;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button1:hover {
+            background-color: rgb(0, 0, 58);
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: midnightblue;
+        }
+
+        .portfolio-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+        }
+
+        .D1, .D2, .D3 {
+            flex: 1;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .D1 h2, .D2 h2, .D3 h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: midnightblue;
+        }
+
+        .D1 p, .D2 p, .D3 p {
+            font-size: 1.1em;
+            color: #000000;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .why-us {
+            margin-top: 20px;
+        }
+        .why-us strong{
+            color: midnightblue;
+        }
+
+        .why-us ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .why-us li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .why-us li:before {
+            content: "✔";
+            color: green;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .portfolio-image {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .portfolio-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-section {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .text-section, .image-section {
+                flex: 1 1 100%;
+            }
+            .D5 {
+                padding: 10px;
+            }
+        }
+        .D5 {
+            height: auto;
+            background-color: white;
+        }
+        .D5A {
+            display: grid;
+            place-items: center;
+            color: midnightblue;
+        }
+        .D5B {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .D5Ba, .D5Bb, .D5Bc {
+            display: inline;
+            color: midnightblue;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .D5B {
+                flex-direction: column;
+            }
+
+            .D5Ba, .D5Bb, .D5Bc {
+                margin: 10px 0;
+            }
+        }
+        .D5A p{
+            text-align: center;
+        }
+        .D5Ba{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .D5Bb{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .D5Bc{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .D4 {
+            height: auto;
+            background-color: midnightblue;
+            place-items: center;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 6px 6px 9px 3px rgb(0, 0, 0);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: midnightblue;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid midnightblue;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: midnightblue;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgb(7, 7, 82);
+        }
+
+        footer {
+            background-color: midnightblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <img class="navbar-logo" src="https://uncody.b-cdn.net/logos/nav-logo-dark.svg" alt="BrainScanAI">
+                <span class="navbar-name">BrainScanAI</span>
+            </div>
+        </nav>
+    </header>
+    <div class="portfolio-section">
+            <h1>Brain Tumor Detection AI</h1>
+            <p>Create an AI system that can process and analyze MRI scan images of the brain to detect the presence of brain tumors. The system should perform the following tasks:</p>
+            <ul>
+                <li>Load and interpret MRI scan images (preferably in DICOM format or other common formats like JPEG or PNG).</li>
+                <li>Use advanced image processing techniques, such as convolutional neural networks (CNNs), to detect anomalies, abnormalities, or masses in the brain tissue.</li>
+                <li>Identify and classify any detected tumors into categories such as benign, malignant, or inconclusive, based on the image characteristics and size of the tumor.</li>
+                <li>Provide a confidence score for each detection to indicate the likelihood that the detected abnormality is a tumor.</li>
+                <li>Display the results with visual annotations on the MRI scan, highlighting the location of any detected tumors or abnormalities.</li>
+                <li>Ensure that the system has high accuracy and sensitivity, minimizing false negatives (tumors that are missed) and false positives (misidentified non-tumor areas).</li>
+                <li>Optionally, generate a summary report with additional details, such as the type of tumor (if identified), potential treatment suggestions, or a recommendation for further medical consultation.</li>
+            </ul>
+            <button class="button1" onclick="window.location.href='https://sameersingh369.github.io/BSAIIS/'">Get started</button>
+    </div>
+    <div class="portfolio-section">
+        <div class="D1">
+            <div class="why-us">
+                <h2>Why Us?</h2>
+                <p>Here's the reason why you should choose us. We are the best in the industry. Our team of experts has years of experience.</p>
+                <ul>
+                    <li><strong>Accurate Prediction:</strong> Utilizing advanced algorithms, we ensure that our predictions are precise and reliable, putting you in control of your health.</li>
+                    <li><strong>User-Friendly Interface:</strong> Our platform is designed for everyone. Even your grandma could upload an image faster than you can say 'brain tumor!'</li>
+                    <li><strong>Expert Support:</strong> Have questions? Our team of brainiacs is here to assist you every step of the way, from upload to understanding results.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="portfolio-image">
+            <img src="i5.webp" alt="Portfolio Image">
+        </div>
+    </div>
+    
+    <!-- Second Portfolio Section -->
+    <div class="portfolio-section">
+        <div class="portfolio-image">
+            <img src="i2.webp" alt="Portfolio Image">
+        </div>
+        <div class="D2">
+            <div class="why-us">
+                <h2>Deep Learning at Your Fingertip</h2>
+                <p>Revolutionary technology that brings advanced imaging analysis right to you. Say goodbye to traditional methods!</p>
+                <ul>
+                    <li><strong>Image Preprocessing:</strong>Transform your raw images into data-ready formats with our state-of-the-art preprocessing algorithms.</li>
+                    <li><strong>Robust Framework:</strong> Built on TensorFlow, Keras, and more, our framework is as solid as your determination to fight back!</li>
+                    <li><strong>Instant Results:</strong>Get predictions faster than you can finish your first cup of coffee—because time is of the essence!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-section">
+        <div class="D3">
+            <div class="why-us">
+                <h2>Our Services</h2>
+                <p>From image uploads to insightful predictions, we offer a range of services designed to help you navigate your health journey.</p>
+                <ul>
+                    <li><strong>Image Uploads:</strong>Easy and secure uploads—because your health deserves the safest touch.</li>
+                    <li><strong>Accurate Predictions:</strong>Leave uncertainty behind; our predictions are backed by deep learning technology.
+                    <li><strong>Comprehensive Reports:</strong>Receive detailed reports explaining your results in simple terms—no medical jargon, just clarity.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="portfolio-image">
+            <img src="i3.webp" alt="Portfolio Image">
+        </div>
+    </div>
+    <div class="D4">     
+        <br>
+        <br>
+        <form class="form-container" method="post">
+            <h2>Request a Demo</h2>
+            <p>Fill out the form below and we’ll get in touch with you for a demo.</p>
+            <input type="email" placeholder="Enter your Gmail" required>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <textarea placeholder="Enter your message..." required></textarea>
+            <button type="submit" onclick="window.location.href='https://sameersingh369.github.io/BSAITY/'">Request Demo</button>
+        </form>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="D5">
+        <div class="D5A">
+            <h1>Our Impact in Numbers</h1>
+            <p>
+                The numbers speak for themselves. Here’s how we’re changing the game!
+            </p>
+        </div>
+        <div class="D5B">
+            <div class="D5Ba">
+                <h2>1000+</h2>
+                <p>
+                    Patients Helped
+                </p>
+            </div>
+            <div class="D5Bb">
+                <h2>95% Accuracy</h2>
+                <p>
+                    Successful Predictions
+                </p>
+            </div>
+            <div class="D5Bc">
+                <h2>5 Years</h2>
+                <p>
+                    Years in Development
+                </p>
+            </div>
+        </div> 
+    </div>
+    <footer>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Blog</a>
+        </div>
+        <div>
+            <p>© 2025 BrainScanAI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
